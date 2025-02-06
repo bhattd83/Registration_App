@@ -38,7 +38,7 @@ const Model = (() => {
         //console.log(users)
         const maxID = users.length > 0 ? Math.max(...users.map(user=>Number(user.id))) : 0;
         //console.log(maxID);
-        obj.id = maxID+1;
+        obj.id = String(maxID+1);//converting to a string because the delete,get,update etc queries only work if the id is string apparently.
         return fetch(this.url,{
           method:"POST",
           headers:{"Content-Type":"application/json"},
@@ -148,7 +148,7 @@ const Model = (() => {
           // const userobj = Model.api.getUserById(1).then(res=>console.log(res));
           // const mergedobj = {...userobj,...{firstname:"Vipul",lastname:"Singh",email:"abc.gmail.com"}}
           // Model.api.updateUser(1,mergedobj).then(res=>console.log("User Updated",res));
-          Model.api.deleteUser(2).then((res)=>console.log("Deleted User",res));
+          Model.api.deleteUser(9).then((res)=>console.log("Deleted User",res));
         }
       )
 
