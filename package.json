@@ -4,7 +4,7 @@
     "live-server": "^1.2.2"
   },
   "scripts": {
-    
+    "live-server": "live-server --ignore=./src/db.json .",
     "json-server": "npx json-server ./src/db.json",
     "start": "npm run json-server & npm run live-server"
   }
