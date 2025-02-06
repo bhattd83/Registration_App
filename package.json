@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "live-server": "^1.2.2"
+  },
+  "scripts": {
+    
+    "json-server": "npx json-server ./src/db.json",
+    "start": "npm run json-server & npm run live-server"
+  }
+}
